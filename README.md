@@ -1,54 +1,50 @@
 <p align="center">
     <a href="github.address">
-        <img src="https://raw.githubusercontent.com/shayanheidari01/rubika/master/icon.png" alt="Rubpy" width="128">
+        <img src="https://raw.githubusercontent.com/irvanyamirali/aiorubika/master/icon.png" alt="AIORubika" width="128">
     </a>
     <br>
     <b>Rubika API Framework for Python</b>
     <br>
-    <a href="https://github.com/shayanheidari01/rubika">
+    <a href="https://github.com/irvanyamirali/aiorubika">
         Homepage
     </a>
     •
-    <a href="https://docs.rubpy.site">
+    <a href="https://github.com/irvanyamirali/aiorubika">
         Documentation
     </a>
     •
-    <a href="https://pypi.org/project/rubpy/#history">
+    <a href="https://pypi.org/project/aiorubika/#history">
         Releases
-    </a>
-    •
-    <a href="https://t.me/rubika_library">
-        News
     </a>
 </p>
 
-## Rubpy
+## AIORubika
 
 > Elegant, modern and asynchronous Rubika API framework in Python for users and bots
 
 ### Async Accounts
 ```python
-from rubpy import Client, filters, utils
-from rubpy.types import Updates
+from aiorubikaimport Client, filters, utils
+from aiorubika.types import Updates
 
-bot = Client(name='rubpy')
+bot = Client(name='my_account')
 
 @bot.on_message_updates(filters.text)
 async def updates(update: Updates):
     print(update)
-    await update.reply(utils.Code('hello') + utils.Underline('from') + utils.Bold('rubpy'))
+    await update.reply(utils.Code('hello') + utils.Underline('from') + utils.Bold('aiorubika'))
 
 bot.run()
 ```
 
 **Async Another Example:**
 ```python
-from rubpy import Client
+from aiorubika import Client
 import asyncio
 
 async def main():
-    async with Client(name='rubpy') as bot:
-        result = await bot.send_message('me', '`hello` __from__ **rubpy**')
+    async with Client(name='my_account') as bot:
+        result = await bot.send_message('me', '`hello` __from__ **aiorubika**')
         print(result)
 
 asyncio.run(main())
@@ -56,33 +52,33 @@ asyncio.run(main())
 
 ### Sync Accounts
 ```python
-from rubpy import Client
+from aiorubika import Client
 
-bot = Client('rubpy')
+bot = Client('my_account')
 
 @bot.on_message_updates()
 def updates(message):
-    message.reply('`hello` __from__ **rubpy**')
+    message.reply('`hello` __from__ **aiorubika**')
 
 bot.run()
 ```
 
 **Sync Another Example:**
 ```python
-from rubpy import Client
+from aiorubika import Client
 
-with Client(name='rubpy') as client:
-    result = client.send_message('me', '`hello` __from__ **rubpy**')
+with Client(name='my_account') as client:
+    result = client.send_message('me', '`hello` __from__ **aiorubika**')
     print(result)
 ```
 
-**Rubpy** is a modern, elegant and asynchronous framework. It enables you to easily interact with the main Rubika API through a user account (custom client) or a bot
+**AIORubika** is a modern, elegant and asynchronous framework. It enables you to easily interact with the main Rubika API through a user account (custom client) or a bot
 identity (bot API alternative) using Python.
 
 
 ### Key Features
 
-- **Ready**: Install Rubpy with pip and start building your applications right away.
+- **Ready**: Install AIORubika with pip and start building your applications right away.
 - **Easy**: Makes the Rubika API simple and intuitive, while still allowing advanced usages.
 - **Elegant**: Low-level details are abstracted and re-presented in a more convenient way.
 - **Fast**: Boosted up by pycryptodome, a high-performance cryptography library written in C.
@@ -92,5 +88,5 @@ identity (bot API alternative) using Python.
 ### Installing
 
 ``` bash
-pip3 install -U rubpy
+pip3 install -U aiorubika
 ```
