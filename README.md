@@ -24,7 +24,7 @@
 
 ### Async Accounts
 ```python
-from aiorubikaimport Client, filters, utils
+from aiorubika import Client, filters, utils
 from aiorubika.types import Updates
 
 bot = Client(name='my_account')
